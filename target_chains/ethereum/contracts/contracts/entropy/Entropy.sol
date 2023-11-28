@@ -74,7 +74,8 @@ import "./EntropyState.sol";
 // cases where the user chooses not to reveal.
 contract Entropy is IEntropy, EntropyState {
     // TODO: Use an upgradeable proxy
-    constructor(uint pythFeeInWei, address defaultProvider) {
+    constructor(address admin, uint pythFeeInWei, address defaultProvider) {
+        _state.admin = admin;
         _state.accruedPythFeesInWei = 0;
         _state.pythFeeInWei = pythFeeInWei;
         _state.defaultProvider = defaultProvider;

@@ -6,6 +6,7 @@ import "@pythnetwork/entropy-sdk-solidity/EntropyStructs.sol";
 
 contract EntropyInternalStructs {
     struct State {
+        address admin;
         uint pythFeeInWei;
         uint accruedPythFeesInWei;
         address defaultProvider;

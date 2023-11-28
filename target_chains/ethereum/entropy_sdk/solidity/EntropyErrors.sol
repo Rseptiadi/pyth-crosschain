@@ -19,4 +19,6 @@ library EntropyErrors {
     error IncorrectUserRevelation();
     // The provider's revealed random value did not match their commitment.
     error IncorrectProviderRevelation();
+    // Governance message is invalid (e.g., deserialization error).
+    error InvalidGovernanceMessage();
 }
